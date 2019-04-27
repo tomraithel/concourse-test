@@ -1,0 +1,23 @@
+{
+  "name": "concourse-test",
+  "version": "1.0.0",
+  "description": "- Test resource triggers - Foo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomraithel/concourse-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tomraithel/concourse-test/issues"
+  },
+  "homepage": "https://github.com/tomraithel/concourse-test#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.3"
+  }
+}

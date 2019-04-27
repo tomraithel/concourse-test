@@ -8,8 +8,7 @@ inputs:
   - name: concourse-test
 
 outputs:
-  - name: build
+  - name: dist
 
 run:
-  path: node
-  args: [concourse-test/index.js]
+  path: concourse-test/build.sh
