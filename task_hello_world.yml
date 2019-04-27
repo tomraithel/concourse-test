@@ -4,6 +4,9 @@ image_resource:
   type: docker-image
   source: { repository: node }
 
+inputs:
+  - name: concourse-test
+
 run:
   path: node
-  args: [index.js]
+  args: [concourse-test/index.js]

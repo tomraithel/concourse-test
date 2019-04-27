@@ -1,8 +1,18 @@
 const fs = require("fs");
-fs.writeFile("build/bundle.ts", String(new Date()), function(err) {
-  if (err) {
+const { promisify } = require("util");
+
+const mkdirAsync = promisify(fs.mkdir);
+const writeFileAsync = promisify(fs.writeFile);
+
+async function run() {
+  try {
+    await mkdirAsync("build");
+    await writeFileAsync("build/bundle.ts", String(new Date()));
+  } catch (err) {
     return console.log(err);
   }
 
   console.log("The file was saved!");
-});
+}
+
+run();
