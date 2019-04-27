@@ -6,7 +6,9 @@ const writeFileAsync = promisify(fs.writeFile);
 
 async function run() {
   try {
-    await mkdirAsync("build");
+    if (!fs.existsSync("build")) {
+      await mkdirAsync("build");
+    }
     await writeFileAsync("build/bundle.js", String(new Date()));
   } catch (err) {
     return console.log(err);
