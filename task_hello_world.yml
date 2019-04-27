@@ -7,6 +7,9 @@ image_resource:
 inputs:
   - name: concourse-test
 
+outputs:
+  - name: build
+
 run:
   path: node
   args: [concourse-test/index.js]
