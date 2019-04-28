@@ -11,3 +11,6 @@ npm ci
 
 # execute build
 npm run build
+
+# copy docker file
+cp Dockerfile dist
